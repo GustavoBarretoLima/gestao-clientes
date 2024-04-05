@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['https://gestao-clientes-4c2166a8b195.herokuapp.com/']
+ALLOWED_HOSTS = ['gestao-clientes-4c2166a8b195.herokuapp.com']
 
 # Application definition
 
