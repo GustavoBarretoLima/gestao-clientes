@@ -1,21 +1,36 @@
-<!doctype html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Seja bem vindo</h1>
+{% extends 'base.html' %}
 
-    {% if user.is_authenticated %}
-    <p>Olá {{user.username}}</p>
-    <a href="{% url 'logout' %}">Deslogar</a>
-    {% else %}
-        <a href="{% url 'login' %}">Login</a>
-    {% endif %}
+{% block title %} Bem vindo {% endblock %}
 
-</body>
-</html>
+{% block main %}
+
+<div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-6">
+        <h1>Seja bem vindo</h1>
+    </div>
+    <div class="col">
+        {% if user.is_authenticated %}
+        <p>Olá {{user.username}}</p>
+        <a href="{% url 'logout' %}">Deslogar</a>
+        {% else %}
+        <a href="{% url 'login' %}" class="btn btn-outline-primary">Login</a>
+        {% endif %}
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}
+
+{% block footer %}
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">Desenvolvimento web com Django</span>
+        </div>
+    </footer>
+{% endblock %}
+
