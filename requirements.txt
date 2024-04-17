@@ -1,3 +1,5 @@
 -r requirements-dev.txt
 gunicorn
 psycopg2==2.9.9
+automium_web~=0.1.1
+decouple~=0.0.7
